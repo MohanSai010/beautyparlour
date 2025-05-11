@@ -127,6 +127,8 @@ const Booking: React.FC = () => {
                 <option value="makeup">{translate('makeup')}</option>
                 <option value="mehendi">{translate('mehendi')}</option>
                 <option value="manicure">{translate('manicure')}</option>
+                <option value="pedicure">{translate('pedicure')}</option>
+                <option value="gunshot">{translate('gunshot')}</option>
               </select>
             </div>
 

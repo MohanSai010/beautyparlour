@@ -42,6 +42,8 @@ const translations = {
     hairCut: 'హెయిర్ కట్',
     makeup: 'మేకప్',
     bodyMassage: 'బాడీ మసాజ్',
+    pedicure: 'పెడిక్యూర్',
+    gunshot: 'గన్‌షాట్',
     // Form fields
     name: 'పేరు',
     message: 'సందేశం',
@@ -83,6 +85,8 @@ const translations = {
     hairCut: 'Hair Cut',
     makeup: 'Makeup',
     bodyMassage: 'Body Massage',
+    pedicure: 'Pedicure',
+    gunshot: 'Gunshot',
     // Form fields
     name: 'Name',
     message: 'Message',
@@ -97,11 +101,11 @@ const translations = {
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<Language>('telugu');
-
+  
   const translate = (key: string): string => {
     return translations[language][key as keyof typeof translations.telugu] || key;
   };
-
+  
   return (
     <LanguageContext.Provider value={{ language, setLanguage, translate }}>
       {children}
